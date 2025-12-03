@@ -1,8 +1,8 @@
 import { Market, WilmaColor } from './types';
 
-// Using a relative string path. 
-// We include a reference in index.html to ensure the bundler picks this file up.
-const PLACEHOLDER_IMAGE = './imageplaceholder.jpg';
+// Use a string path relative to the root.
+// The build process (vite.config.ts) ensures this file is copied to the output directory.
+const PLACEHOLDER_IMAGE = 'imageplaceholder.jpg';
 
 export const WILMA_COLORS = {
   yellow: WilmaColor.Yellow,
