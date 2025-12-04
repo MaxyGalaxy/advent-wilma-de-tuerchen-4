@@ -11,7 +11,7 @@ interface SidebarProps {
 const MarketSidebar: React.FC<SidebarProps> = ({ market, onClose }) => {
   // Feature toggle: When true, the "Mehr erfahren" button is enabled and the image is visible
   // When false, the button is disabled and the image is completely hidden
-  const isContentEnabled = false;
+  const isContentEnabled = true;
 
   if (!market) {
     return null;
@@ -118,12 +118,14 @@ const MarketSidebar: React.FC<SidebarProps> = ({ market, onClose }) => {
       <div className="p-6 border-t border-gray-100 bg-gray-50 flex-shrink-0 flex gap-4">
         
         {/* Mehr erfahren Button - Primary Solid */}
-        <button 
-          disabled={!isContentEnabled}
+        <a 
+          href={isContentEnabled ? market.link : undefined}
+          target="_blank"
+          rel="noopener noreferrer"
           className={`flex-1 py-3 px-4 rounded-full font-bold text-lg transition-all shadow-sm flex items-center justify-center ${
             isContentEnabled 
               ? 'hover:shadow-md hover:brightness-110 cursor-pointer' 
-              : 'opacity-50 cursor-not-allowed'
+              : 'opacity-50 cursor-not-allowed pointer-events-none'
           }`}
           style={{ 
             backgroundColor: WILMA_COLORS.mediumBlue, 
@@ -132,7 +134,7 @@ const MarketSidebar: React.FC<SidebarProps> = ({ market, onClose }) => {
         >
           <Info size={22} className="mr-2" />
           Mehr erfahren
-        </button>
+        </a>
 
         {/* Route planen Button - Outline */}
         <a 

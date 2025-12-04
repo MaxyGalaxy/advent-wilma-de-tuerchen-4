@@ -7,6 +7,7 @@ export interface Market {
   dates: string;
   lat: number;
   lng: number;
+  link: string;
   imageUrl: string;
   isSpecial?: boolean; // Highlight certain markets if needed
 }

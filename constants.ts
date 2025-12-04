@@ -2,7 +2,7 @@ import { Market, WilmaColor } from './types';
 
 // Use a string path relative to the root.
 // The build process (vite.config.ts) ensures this file is copied to the output directory.
-const PLACEHOLDER_IMAGE = 'imageplaceholder.jpg';
+const PLACEHOLDER_IMAGE = 'placeholder.jpg';
 
 export const WILMA_COLORS = {
   yellow: WilmaColor.Yellow,
@@ -24,6 +24,7 @@ export const MARKETS: Market[] = [
     dates: '14.11. – 23.12.2025',
     lat: 51.4556,
     lng: 7.0116,
+    link: "https://www.visitessen.de/essener_weihnachtsmarkt",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -35,6 +36,7 @@ export const MARKETS: Market[] = [
     dates: '24.11. – 23.12.2025',
     lat: 51.9607,
     lng: 7.6261,
+    link: "https://www.weihnachtsmarkt-muenster.com",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -46,6 +48,7 @@ export const MARKETS: Market[] = [
     dates: '20.11. – 30.12.2025',
     lat: 51.5136,
     lng: 7.4653,
+    link: "https://www.weihnachtsstadt-do.de",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -57,6 +60,7 @@ export const MARKETS: Market[] = [
     dates: '17.11. – 23.12.2025',
     lat: 50.9413,
     lng: 6.9583,
+    link: "https://www.koelnerweihnachtsmarkt.com/de",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -68,6 +72,7 @@ export const MARKETS: Market[] = [
     dates: '20.11. – 30.12.2025',
     lat: 51.2277,
     lng: 6.7735,
+    link: "https://www.visitduesseldorf.de/erleben/veranstaltungen/weihnachten-in-duesseldorf",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -79,6 +84,7 @@ export const MARKETS: Market[] = [
     dates: '29. Nov – 21. Dez 2025 (Sa & So)',
     lat: 50.6225,
     lng: 6.7077,
+    link: "https://www.burgsatzvey.de/veranstaltungen/burgweihnacht-2025-1",
     imageUrl: PLACEHOLDER_IMAGE
   },
 
@@ -92,6 +98,7 @@ export const MARKETS: Market[] = [
     dates: '25.11. – 22.12.2025',
     lat: 48.7428,
     lng: 9.3072,
+    link: "https://www.esslingen-info.com/veranstaltungen/mittelaltermarkt-weihnachtsmarkt",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -103,6 +110,7 @@ export const MARKETS: Market[] = [
     dates: '26.11. – 23.12.2025',
     lat: 48.7758,
     lng: 9.1829,
+    link: "https://www.stuttgarter-weihnachtsmarkt.de/en/home/",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -114,6 +122,7 @@ export const MARKETS: Market[] = [
     dates: '27. Nov – 21. Dez 2025 (Do–So)',
     lat: 49.3857,
     lng: 8.5707,
+    link: "https://www.visit-schwetzingen.de/genuss-tradition/weihnachtsmarkt-1",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -125,6 +134,7 @@ export const MARKETS: Market[] = [
     dates: '28.11. – 23.12.2025',
     lat: 48.4042,
     lng: 8.0150,
+    link: "https://www.gengenbach.info/veranstaltungen/gengenbacher-adventskalender-621959dfd5",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -136,6 +146,7 @@ export const MARKETS: Market[] = [
     dates: '28. Nov – 21. Dez 2025 (Fr–So)',
     lat: 47.9250,
     lng: 8.0480,
+    link: "https://www.hochschwarzwald.de/en/christmas-market-in-the-ravenna-gorge",
     imageUrl: PLACEHOLDER_IMAGE
   },
 
@@ -149,6 +160,7 @@ export const MARKETS: Market[] = [
     dates: '28.11. – 30.12.2025',
     lat: 49.4520,
     lng: 11.0767,
+    link: "https://www.christkindlesmarkt.de",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -160,6 +172,7 @@ export const MARKETS: Market[] = [
     dates: '27.11–30.11 & 04.12–07.12.2025',
     lat: 47.8718,
     lng: 12.4253,
+    link: "https://www.chiemsee-alpenland.de/entdecken/veranstaltungen-brauchtum/veranstaltungs-highlights/christkindlmarkt-fraueninsel",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -171,6 +184,7 @@ export const MARKETS: Market[] = [
     dates: '21.11. – 23.12.2025',
     lat: 49.3768,
     lng: 10.1772,
+    link: "https://www.rothenburg-tourismus.de/veranstaltungen/reiterlesmarkt",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -182,6 +196,7 @@ export const MARKETS: Market[] = [
     dates: '24.11. – 24.12.2025',
     lat: 48.1372,
     lng: 11.5761,
+    link: "https://www.muenchen.de/veranstaltungen/event/1140.html",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -193,6 +208,7 @@ export const MARKETS: Market[] = [
     dates: '28.11. – 24.12.2025',
     lat: 48.1616,
     lng: 11.5866,
+    link: "https://www.schwabingerweihnachtsmarkt.de",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -204,6 +220,7 @@ export const MARKETS: Market[] = [
     dates: '29. Nov – 21. Dez 2025 (Sa & So)',
     lat: 47.7087,
     lng: 11.7563,
+    link: "https://www.tegernsee.com/adventszauber",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -215,6 +232,7 @@ export const MARKETS: Market[] = [
     dates: '28.11. – 23.12.2025',
     lat: 49.7939,
     lng: 9.9512,
+    link: "https://www.wuerzburg.de/leben-in-wuerzburg/veranstaltungen/100115.Weihnachtsmarkt.html",
     imageUrl: PLACEHOLDER_IMAGE
   },
 
@@ -228,6 +246,7 @@ export const MARKETS: Market[] = [
     dates: '24.11. – 22.12.2025',
     lat: 50.1109,
     lng: 8.6821,
+    link: "https://www.frankfurt-tourismus.de/en/Discover-Experience/Events/Frankfurt-Christmas-Market",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -239,6 +258,7 @@ export const MARKETS: Market[] = [
     dates: '06.12. – 07.12.2025',
     lat: 50.1793,
     lng: 8.5085,
+    link: "https://www.weihnachtsmarkt-deutschland.de/kronberg-weihnachtsmarkt.html",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -250,6 +270,7 @@ export const MARKETS: Market[] = [
     dates: '27.11. – 14.12.2025',
     lat: 50.0433,
     lng: 8.9757,
+    link: "https://www.seligenstadt.de/de/erleben/veranstaltungen/29-seligenstaedter-adventsmarkt",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -261,6 +282,7 @@ export const MARKETS: Market[] = [
     dates: '17.11. – 23.12.2025',
     lat: 49.8728,
     lng: 8.6512,
+    link: "https://www.darmstadt-tourismus.de/en/events/christmas-market",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -272,6 +294,7 @@ export const MARKETS: Market[] = [
     dates: '25.11. – 23.12.2025',
     lat: 50.0820,
     lng: 8.2414,
+    link: "https://www.wiesbaden.de/leben-in-wiesbaden/freizeit/maerkte/sterntauchen.php",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -283,6 +306,7 @@ export const MARKETS: Market[] = [
     dates: '27.11. – 23.12.2025',
     lat: 49.9994,
     lng: 8.2739,
+    link: "https://www.mainz.de/freizeit-und-sport/maerkte/weihnachtsmarkt.php",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -294,6 +318,7 @@ export const MARKETS: Market[] = [
     dates: '13.12. – 14.12.2025',
     lat: 50.1852,
     lng: 8.7366,
+    link: "https://www.bad-vilbel.de/tourismus-freizeit/veranstaltungen/weihnachtsmarkt",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -305,6 +330,7 @@ export const MARKETS: Market[] = [
     dates: '04.12. – 27.12.2025',
     lat: 50.2036,
     lng: 8.5770,
+    link: "https://www.oberursel.de/kultur-und-freizeit/feste-und-maerkte/weihnachtsmarkt/",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -316,6 +342,7 @@ export const MARKETS: Market[] = [
     dates: '24.11. – 22.12.2025',
     lat: 50.1328,
     lng: 8.9169,
+    link: "https://www.hanau.de/tourismus/veranstaltungen/hanauer-weihnachtsmarkt",
     imageUrl: PLACEHOLDER_IMAGE
   },
   {
@@ -327,6 +354,7 @@ export const MARKETS: Market[] = [
     dates: '06.12–08.12 & 13.12–15.12.2025',
     lat: 50.0076,
     lng: 8.7042,
+    link: "https://www.burg-hayn.de/veranstaltungen/weihnachtsmarkt",
     imageUrl: PLACEHOLDER_IMAGE
   }
 ];
