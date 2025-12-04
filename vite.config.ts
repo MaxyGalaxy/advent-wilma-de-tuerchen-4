@@ -11,16 +11,16 @@ export default defineConfig({
       // Manual copy hook to ensure the file exists in dist since we are not importing it
       closeBundle() {
         try {
-          if (fs.existsSync('imageplaceholder.jpg')) {
-            const dest = 'dist/imageplaceholder.jpg';
+          if (fs.existsSync('placeholder.jpg')) {
+            const dest = 'dist/placeholder.jpg';
             // Ensure dist exists (it should after build)
             if (!fs.existsSync('dist')) {
                fs.mkdirSync('dist');
             }
-            fs.copyFileSync('imageplaceholder.jpg', dest);
-            console.log(`[vite.config] Copied imageplaceholder.jpg to ${dest}`);
+            fs.copyFileSync('placeholder.jpg', dest);
+            console.log(`[vite.config] Copied placeholder.jpg to ${dest}`);
           } else {
-             console.warn('[vite.config] Warning: imageplaceholder.jpg not found in root.');
+             console.warn('[vite.config] Warning: placeholder.jpg not found in root.');
           }
         } catch (e) {
           console.error('[vite.config] Failed to copy image:', e);
