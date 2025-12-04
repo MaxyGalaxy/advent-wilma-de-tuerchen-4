@@ -9,6 +9,10 @@ interface SidebarProps {
 }
 
 const MarketSidebar: React.FC<SidebarProps> = ({ market, onClose }) => {
+  // Feature toggle: When true, the "Mehr erfahren" button is enabled and the image is visible
+  // When false, the button is disabled and the image is completely hidden
+  const isContentEnabled = false;
+
   if (!market) {
     return null;
   }
@@ -49,37 +53,49 @@ const MarketSidebar: React.FC<SidebarProps> = ({ market, onClose }) => {
       {/* 2. Scrollable Content (Image + Details) */}
       <div className="flex-1 overflow-y-auto bg-white">
         
-        {/* Image Container with Overlay Title */}
-        <div className="relative w-full h-64">
-          <img 
-            src={market.imageUrl} 
-            alt={market.name} 
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              // Fallback if local image fails to load
-              (e.target as HTMLImageElement).style.display = 'none'; 
-              (e.target as HTMLImageElement).parentElement!.style.backgroundColor = WILMA_COLORS.grey;
-            }}
-          />
-          {/* Gradient Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
-          
-          {/* Market Name Overlay */}
-          <div className="absolute bottom-0 left-0 w-full p-6 z-10">
-            <h2 
-              className="text-2xl font-bold text-white mb-3 leading-tight"
-              style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}
-            >
-              {market.name}
-            </h2>
-            {/* Rounded Line - White */}
-            <div className="h-1.5 w-24 rounded-full bg-white shadow-sm"></div>
+        {/* Image Container with Overlay Title - Only shown when isContentEnabled is true */}
+        {isContentEnabled && (
+          <div className="relative w-full h-64">
+            <img 
+              src={market.imageUrl} 
+              alt={market.name} 
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                // Fallback if local image fails to load
+                (e.target as HTMLImageElement).style.display = 'none'; 
+                (e.target as HTMLImageElement).parentElement!.style.backgroundColor = WILMA_COLORS.grey;
+              }}
+            />
+            {/* Gradient Overlay for Text Readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+            
+            {/* Market Name Overlay */}
+            <div className="absolute bottom-0 left-0 w-full p-6 z-10">
+              <h2 
+                className="text-2xl font-bold text-white mb-3 leading-tight"
+                style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}
+              >
+                {market.name}
+              </h2>
+              {/* Rounded Line - White */}
+              <div className="h-1.5 w-24 rounded-full bg-white shadow-sm"></div>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Text Details */}
         <div className="px-8 py-8">
           
+          {/* Market Name - Only shown when image is hidden */}
+          {!isContentEnabled && (
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-800 leading-tight mb-3">
+                {market.name}
+              </h2>
+              <div className="h-1.5 w-24 rounded-full" style={{ backgroundColor: WILMA_COLORS.mediumBlue }}></div>
+            </div>
+          )}
+
           {/* Opening Times (Öffnungszeitraum) - Full Width, No Card */}
           <div className="flex items-start gap-4 mb-8 w-full">
             <Calendar className="flex-shrink-0 mt-1" size={24} style={{ color: WILMA_COLORS.mediumBlue }} />
@@ -103,7 +119,12 @@ const MarketSidebar: React.FC<SidebarProps> = ({ market, onClose }) => {
         
         {/* Mehr erfahren Button - Primary Solid */}
         <button 
-          className="flex-1 py-3 px-4 rounded-full font-bold text-lg transition-all shadow-sm hover:shadow-md hover:brightness-110 flex items-center justify-center"
+          disabled={!isContentEnabled}
+          className={`flex-1 py-3 px-4 rounded-full font-bold text-lg transition-all shadow-sm flex items-center justify-center ${
+            isContentEnabled 
+              ? 'hover:shadow-md hover:brightness-110 cursor-pointer' 
+              : 'opacity-50 cursor-not-allowed'
+          }`}
           style={{ 
             backgroundColor: WILMA_COLORS.mediumBlue, 
             color: 'white'
